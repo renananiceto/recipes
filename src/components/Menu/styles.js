@@ -29,9 +29,11 @@ export const MenuNav = styled.ul`
   li{
     cursor: pointer;
     opacity: 0.8;
+    width: 29%;
     &:hover{
       color: black;
       font-weight: bold;
+      transition: 0.5s;
     }
   }
   li:last-child {
