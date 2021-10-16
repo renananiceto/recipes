@@ -2,6 +2,7 @@ import React from "react"
 import Menu from "../components/Menu"
 import Cards from "../components/cards"
 import Content from "../components/Content"
+import Subscribe from "../components/subscribe"
 
 
 import { graphql } from "gatsby"
@@ -20,6 +21,11 @@ export const query = graphql`
 {
 
   alldata{
+    subscribes{
+      title
+      subTitle
+      btnTitle
+    }
     abouts {
       title
       subTitle
@@ -57,6 +63,7 @@ const IndexPage = ({data}) => {
       <Menu {...data.alldata.menuBars[0]} />
       <Cards sectionRevenues={data.alldata.sectionRevenues} />
       <Content abouts={data.alldata.abouts[0]}/>
+      <Subscribe sub={data.alldata.subscribes[0]} />
     </main>
   )
 }

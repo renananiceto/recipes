@@ -25,7 +25,7 @@ export const BoxImg = styled.div`
 
 export const Img = styled.img`
   width: 960px;
-  height: 957px;
+  height: 100%;
 `
 
 
