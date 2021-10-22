@@ -2,7 +2,6 @@ import React from 'react'
 import * as S from './styles'
 
 export default function Content({ abouts }) {
-  const { title, subTitle, alternativeText } = abouts
   return (
     <S.Container>
       <S.Wrapper>

@@ -2,6 +2,7 @@ import React from 'react'
 import * as S from './styles'
 
 export default function Cards({ sectionRevenues }) {
+  console.log('card',sectionRevenues)
   const section = sectionRevenues[0];
   const { title, receitas } = section;
   return (

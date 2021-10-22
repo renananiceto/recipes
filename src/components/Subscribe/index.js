@@ -2,7 +2,6 @@ import React from 'react'
 import * as S from './styles'
 
 export default function subscribe({ sub }) {
-  console.log(sub)
   return (
     <S.Component>
       <S.Wrapper>

@@ -1,8 +1,10 @@
 import React from "react"
+
 import Menu from "../components/Menu"
 import Cards from "../components/cards"
 import Content from "../components/Content"
 import Subscribe from "../components/subscribe"
+import Footer from "../components/Fotter"
 
 
 import { graphql } from "gatsby"
@@ -21,6 +23,13 @@ export const query = graphql`
 {
 
   alldata{
+    footers{
+      titles
+      imgs{
+        url
+      }
+    }
+
     subscribes{
       title
       subTitle
@@ -47,8 +56,8 @@ export const query = graphql`
     cards{
       cardItem
       }
-    menuBars{
-      menuNav
+      menuBars{
+       menuNav
     }
   }
 }
@@ -58,12 +67,12 @@ export const query = graphql`
 const IndexPage = ({data}) => {
   return (
     <main>
-      {/* {console.log(data)} */}
       <GlobalStyle /> 
       <Menu {...data.alldata.menuBars[0]} />
       <Cards sectionRevenues={data.alldata.sectionRevenues} />
       <Content abouts={data.alldata.abouts[0]}/>
       <Subscribe sub={data.alldata.subscribes[0]} />
+      <Footer menuFooters={data.alldata.footers[0]} />
     </main>
   )
 }

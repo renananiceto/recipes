@@ -21,11 +21,11 @@ export const BoxTitle = styled.div`
 `
 
 export const BoxImg = styled.div`
+ width: 50%;
 `
 
 export const Img = styled.img`
-  width: 960px;
-  height: 100%;
+  width: 100%;
 `
 
 
@@ -36,6 +36,9 @@ export const Box = styled.div`
   flex-direction: column;
   justify-content: space-around;
   height: 35rem;
+`
+export const BoxParagraph = styled.div`
+  width: 75%;
 `
 
 export const Title = styled.p`
